@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 import cabbage from "./assets/image1.jpeg";
 import mango from "./assets/image2.jpeg";
@@ -10,6 +10,21 @@ import avocado from "./assets/image6.jpeg";
 const images = [cabbage, mango, fig, gaze, peach, avocado];
 
 const App = () => {
+  const [currentImage, setCurrentImage] = useState(0);
+  const [numLoaded, setNumLoaded] = useState(0);
+
+  const handleClick = () => {
+    const length = images.length - 1;
+
+    setCurrentImage((currentImage) =>
+      currentImage < length ? currentImage + 1 : 0
+    );
+  };
+
+  const handleImageLoad = () => {
+    setNumLoaded((numLoaded) => numLoaded + 1);
+  };
+
   return (
     <section>
       <header>
