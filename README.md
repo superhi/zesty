@@ -2,13 +2,6 @@
 
 A simple photo gallery carousel website.
 
-## Table of contents
-
-- [Getting started](#getting-started)
-- [Tech Stack](#tech-stack)
-
-<a name="getting-started"/>
-
 ## Getting started
 
 1. Install [Node.js](https://www.npmjs.com/get-npm).
@@ -25,8 +18,6 @@ A simple photo gallery carousel website.
    `$ yarn start`
 
 5. Open a new tab and navigate to `http://localhost:3000` to see your app.
-
-<a name="tech-stack"/>
 
 ## Tech stack
 
