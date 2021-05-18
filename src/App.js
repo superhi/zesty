@@ -9,6 +9,15 @@ import avocado from "./assets/image6.jpeg";
 
 const images = [cabbage, mango, fig, gaze, peach, avocado];
 
+const Loading = ({ calculatedWidth }) => (
+  <aside>
+    <div className="loading-bar">
+      <label htmlFor="images-loaded">Loading all your favorite images...</label>
+      <progress id="images-loaded" max="100" value={calculatedWidth}></progress>
+    </div>
+  </aside>
+);
+
 const App = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const [numLoaded, setNumLoaded] = useState(0);
@@ -35,7 +44,12 @@ const App = () => {
       </header>
 
       <figure>
-        <figcaption></figcaption>
+        {numLoaded < images.length && (
+          <Loading calculatedWidth={(numLoaded / images.length) * 100} />
+        )}
+        <figcaption>
+          {currentImage + 1} / {images.length}
+        </figcaption>
         {images.map((imageURL, index) => (
           <img
             alt=""
