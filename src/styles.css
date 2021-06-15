@@ -42,10 +42,26 @@ figure {
   width: 50vw;
 }
 
+nav {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+nav > svg {
+  cursor: pointer;
+  margin: 0 20px;
+}
+
 figcaption {
   bottom: 0;
   color: #fff;
   font-size: 36px;
+  padding: 20px 0;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -53,33 +69,27 @@ figcaption {
   padding: 20px 0;
 }
 
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  position: absolute;
-}
-
-.display {
-  opacity: 1;
-}
-
-.hide {
-  opacity: 0;
-}
-
+img,
 aside {
   height: 100%;
   position: absolute;
   width: 100%;
+}
+
+img {
+  object-fit: cover;
+  opacity: 0;
+}
+
+aside {
+  align-items: center;
   background: #e8e8e8;
   display: flex;
-  align-items: center;
   justify-content: center;
   z-index: 2;
 }
 
-.loading-bar {
+.loading {
   display: grid;
   grid-row-gap: 12px;
 }
@@ -99,6 +109,15 @@ progress {
 }
 
 @media (max-width: 800px) {
+  h1 {
+    font-size: 80px;
+  }
+
+  h2 {
+    font-size: 20px;
+    position: relative;
+  }
+
   section {
     flex-direction: column;
   }
@@ -110,14 +129,11 @@ progress {
 
   figcaption {
     font-size: 30px;
+    padding: 20px 0;
   }
 
-  h2 {
-    font-size: 20px;
-    position: relative;
-  }
-
-  h1 {
-    font-size: 80px;
+  nav > svg {
+    height: 40px;
+    margin: 0 10px;
   }
 }
