@@ -40,21 +40,9 @@ figure {
   margin: 0;
   position: relative;
   width: 50vw;
-}
-
-nav {
-  position: absolute;
-  z-index: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-nav > svg {
-  cursor: pointer;
-  margin: 0 20px;
+  /* this will only work for codesandbox */
+  /* if you're using a text editor like VSCode, move the SVG file to the assets folder in src */
+  cursor: url("/cursor.svg") 25 25, pointer;
 }
 
 figcaption {
@@ -130,10 +118,5 @@ progress {
   figcaption {
     font-size: 30px;
     padding: 20px 0;
-  }
-
-  nav > svg {
-    height: 40px;
-    margin: 0 10px;
   }
 }
